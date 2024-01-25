@@ -60,7 +60,17 @@ header a {
 .active {
 border-bottom: 1px solid #3a3a3a;
 }
-
+/*Navbar styles with dropdown toggle (hamburger meu)*/
+nav{
+    /* takes away from the normal flow and position nea to the ancestor=header and sopra the next=main content*/
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+}
 
 /* Main */
 main {
