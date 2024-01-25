@@ -38,6 +38,10 @@ header {
     width: 100%;
     /*add shadow (slightly over)*/
     box-shadow: 0 2px 2px #3a3a3a;
+    /*to allow the checkbox used for the menu drodown to be on the same line as the Logo*/
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 /*removes the standard style for the links*/
@@ -70,7 +74,24 @@ nav{
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
+    /*top of the element (nav) starts at the bottom of the parent (header) - needed for the dropdown*/
+    top: 100%;
 }
+
+/*Nav toggle = pseudoclass of checkboxes (checked) and apply to the sibling elements (nav) */
+#nav-toggle:checked~nav{
+display: block;
+}
+
+#nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    font-size: 2rem;
+}
+
+
 
 /* Main */
 main {
