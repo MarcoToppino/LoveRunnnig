@@ -17,8 +17,12 @@ body {
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
+
 h1 {
     font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
 /* Header */
@@ -30,8 +34,15 @@ header {
     position: fixed;
     /*high z-index so that it is always visible*/
     z-index: 99;
+    /* full width as when fixed it goes back to the standard style*/
     width: 100%;
+    /*add shadow (slightly over)*/
     box-shadow: 0 2px 2px #3a3a3a;
+}
+/*removes the standard style for the links*/
+header a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Main */
