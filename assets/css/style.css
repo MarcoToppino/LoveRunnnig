@@ -23,7 +23,15 @@ h1 {
 
 /* Header */
 header {
-    background-color: lightcoral;
+    background-color: #ffffff;
+    /*add some space from the left so that does not stick*/
+    padding: 0 1rem;
+    /* keep it blocked on the top*/
+    position: fixed;
+    /*high z-index so that it is always visible*/
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
 }
 
 /* Main */
