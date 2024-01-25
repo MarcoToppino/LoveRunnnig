@@ -57,15 +57,16 @@ header a {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
 .active {
-border-bottom: 1px solid #3a3a3a;
+    border-bottom: 1px solid #3a3a3a;
 }
+
 /*Navbar styles with dropdown toggle (hamburger meu)*/
-nav{
+nav {
     /* takes away from the normal flow and position nea to the ancestor=header and sopra the next=main content*/
     position: absolute;
     background-color: #ffffff;
@@ -79,15 +80,15 @@ nav{
 }
 
 /*Nav toggle = pseudoclass of checkboxes (checked) and apply to the sibling elements (nav) */
-#nav-toggle:checked~nav{
-display: block;
+#nav-toggle:checked~nav {
+    display: block;
 }
 
-#nav-toggle{
+#nav-toggle {
     display: none;
 }
 
-.nav-toggle-label{
+.nav-toggle-label {
     font-size: 2rem;
 }
 
@@ -98,7 +99,7 @@ main {
     background-color: lightblue;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
-    /*to make the content visible under the dropdown menu*/
+    /*to make the content visible under fixed header*/
     margin-top: 47px;
 }
 
@@ -106,4 +107,28 @@ main {
 footer {
     background-color: orange;
 
+}
+
+/*Media quesry tablets and larger (768 and uppx) - Responsive Display*/
+@media screen and (min-width:768px) {
+
+    /*Header always displayed with the navbar links always visible*/
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+    .nav-toggle-label{
+        display: none;
+    }
 }
