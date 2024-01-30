@@ -204,7 +204,17 @@ main {
     /*overrides the heading color set in general styles*/
     color: #ffffff;
 }
+/*Gallery Page */
+#photos img {
+    width: 100%;
+    /*To make the alt text readable when we (later) eliminate the white line between images*/
+    line-height: 1em;
+}
 
+#photos {
+    /*img are treated as text so the std line-height makes a white line between them. This removes it*/
+    line-height: 0;
+}
 
 /* footer */
 #social-networks {
